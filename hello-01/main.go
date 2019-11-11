@@ -39,12 +39,25 @@ func main() {
 	//step 3
 	var slice1 = []int{1, 2, 3}
 	var slice2 = [4]int{1, 2, 3}
-	slice1[3] = 4
 	for k, v := range slice1 {
 		fmt.Print(strconv.Itoa(k) + ":" + strconv.Itoa(v) + "\t")
 	}
+	fmt.Println()
+	fmt.Println("===============")
 	slice2[3] = 4
 	for k, v := range slice2 {
 		fmt.Print(strconv.Itoa(k) + ":" + strconv.Itoa(v) + "\t")
 	}
+	fmt.Println()
+	fmt.Println("===============")
+	// add element to slice
+	var slice3 []int
+	slice3 = append(slice3, 1)
+	slice3 = append(slice3, []int{2, 3, 4}...)
+	slice3 = append(slice3, 5, 6)
+	for k, v := range slice3 {
+		fmt.Print(strconv.Itoa(k) + ":" + strconv.Itoa(v) + "\t")
+	}
+	fmt.Println()
+	fmt.Println("===============")
 }
