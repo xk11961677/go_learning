@@ -1,0 +1,9 @@
+# Default ignored files
+### Example user template
+
+# IntelliJ project files
+*.iml
+/misc.xml
+/modules.xml
+/vcs.xml
+/workspace.xml
