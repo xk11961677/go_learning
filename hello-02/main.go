@@ -30,12 +30,13 @@ func Find(m map[int]string, key int) (value string, ok bool) {
 	return
 }
 
-//defer 延迟调用,自己函数本身会调用
+//defer 延迟调用,先执行①后执行②
 func Inc(v int) int {
 	defer func() {
 		v++
-		fmt.Println(v)
+		fmt.Println("===②" + strconv.Itoa(v))
 	}()
+	fmt.Println("======①" + strconv.Itoa(v))
 	return 42
 }
 
